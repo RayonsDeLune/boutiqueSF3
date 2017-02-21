@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}{% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+</head>
+<body>
+    <a href="{{path('produit_index')}}">Produits</a> --- 
+    <a href="{{path('commande_index')}}">Commandes</a> --- 
+    <a href="{{path('categorie_index')}}">Catégories</a> --- 
+    <a href="{{path('client_index')}}">Clients</a>
+    <br/>
+    <a href="{{path('lister_produits')}}">Lister les produits</a> --- 
+    <a href="{{path('lister_produits_par_cat')}}">Lister les produits par catégorie</a> --- 
+    <a href="{{path('lister_clients')}}">Lister tous les clients</a> --- 
+    <a href="{{path('lister_commandes_par_client')}}">Lister les commandes par client</a>
+    <br/>
+    <a href="{{path('lister_produits_100_5000')}}">Lister les produits dont le prix est entre 100 et 5000</a> --- 
+    <a href="{{path('lister_produits_1_2_3')}}">Lister les produits 1,2,3</a> --- 
+    <a href="{{path('lister_commandes_Antoine')}}">Lister les cmdes passées par Antoine</a> --- 
+    <a href="{{path('lister_commandes_Wars')}}">Lister les cmdes passées par Wars</a>
+    <br/>
+    <a href="{{path('lister_produits_commandes_par_Flo')}}">Lister les produits commandés par Florence</a> --- 
+    <a href="{{path('lister_commandes_pelle')}}">Lister les cmdes comprenant une pelle</a> --- 
+    <a href="{{path('lister_produits_commandes')}}">Lister les produits commandes</a> --- 
+    <a href="{{path('lister_produits_non_commandes')}}">Lister les produits non commandes</a>
+    <br/>
+    <a href="{{path('lister_produits_commandes_par_Flo_et_pas_par_Trump')}}">Lister les produits commandés par Florence et pas par Trump</a> --- 
+    <a href="{{path('lister_produits_nb_commandes')}}">Lister pour chaque produit le nb de fois commandés</a> --- 
+    <a href="{{path('lister_produits_nb_commandes_sup_1')}}">Lister pour chaque produit le nb de fois commandés >= 2</a>
+    <br/>
+    <a href="{{path('rechercher_produit_titre_desc')}}">Rechercher un produit par titre ou description</a> --- 
+    <a href="{{path('lister_produits_commandes_par_login')}}">Lister les produits commandés par Login</a> --- 
+    <a href="{{path('lister_produits_pagination')}}">Lister les produits par pagination</a> --- 
+    <br/>
+    <a href="{{path('qb')}}">Acces au QB</a> --- 
+    <a href="{{path('inscription')}}">Inscription d'un client</a> --- 
+    <a href="{{path('filtres')}}">filtrer les produits, cmdes, clients</a>
+    <br/>
+    <br/>
+{% block body %}{% endblock %}
+{% block javascripts %}{% endblock %}
+</body>
+</html>

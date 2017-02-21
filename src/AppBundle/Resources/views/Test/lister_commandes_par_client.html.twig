@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+{#    <h1>{{titre}}</h1>#}
+    {% for cmdAct in mesCommandes %}
+        Date : {{  cmdAct.dateHeureCreation | date}}
+        Etat : {{ cmdAct.etat }}
+        Prix total : {{ cmdAct.prixTotal }}
+        Client : {{cmdAct.client}}
+        Produits :
+        {% for prdAct in cmdAct.produits %}
+             {{ prdAct.titre }} , 
+        {% endfor %}
+        <br>
+    {% endfor %}
+{% endblock %}

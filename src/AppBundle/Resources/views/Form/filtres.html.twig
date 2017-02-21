@@ -1,0 +1,20 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}AppBundle:Form:listeProd{% endblock %}
+
+{% block body %}
+    <h1>Filtre</h1>
+    {# affichage du formulaire pour filtrer les résultats#}
+    {{form(monFormulaire)}}
+    {#Affichage des produits résultats#}
+    <h1>Résultats</h1>
+    {% for prodAct in mesProduits %}
+        Produit actuel: {{ prodAct.titre }}
+        Prix: {{ prodAct.prix }}
+        {% for catAct in prodAct.categories %}
+            Catégorie: {{ catAct.titre }}
+        {% endfor %}
+        <br>
+    {% endfor %}
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>{{titre}}</h1>
+    {% for prodAct in mesProduits %}
+        Produit actuel: {{ prodAct.titre }}
+        Prix: {{ prodAct.prix }}
+        {% for catAct in prodAct.categories %}
+            Catégorie: {{ catAct.titre }}
+        {% endfor %}
+        <br>
+    {% endfor %}
+{% endblock %}
